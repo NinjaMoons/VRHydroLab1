@@ -1,0 +1,36 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : foamRun -solver incompressibleFluid
+Date   : Sep 13 2026
+Time   : 20:17:15
+Host   : "123"
+PID    : 385
+I/O    : uncollated
+Case   : /tmp/CourseProject_V3/reference_transient
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 2500.0000
+
+Selecting solver incompressibleFluid
+
+
+--> FOAM FATAL ERROR: 
+cannot find file "/tmp/CourseProject_V3/reference_transient/2500.0000/p"
+
+    From function virtual Foam::autoPtr<Foam::ISstream> Foam::fileOperations::uncollatedFileOperation::readStream(Foam::regIOobject&, const Foam::fileName&, const Foam::word&, bool) const
+    in file global/fileOperations/uncollatedFileOperation/uncollatedFileOperation.C at line 538.
+
+FOAM exiting
+

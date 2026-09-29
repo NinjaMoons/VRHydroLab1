@@ -1,0 +1,10 @@
+{
+  "name": "course-project-v3-channel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Parameterised SALOME/OpenFOAM/ParaView workflow for Course Project Variant 3",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js"
+  }
+}

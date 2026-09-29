@@ -1,0 +1,26 @@
+COURSEPROJECT_V3_PARAVIEW_OK
+{
+  "cells": 5267,
+  "pointKinematicPressureRangeM2s2": [
+    -0.038903653621673584,
+    0.3159712255001068
+  ],
+  "pointPressureRangePa": [
+    -38.83362704515457,
+    315.4024772942066
+  ],
+  "pointVelocityMagnitudeRangeMps": [
+    0.0006747573471415755,
+    0.42875629614968097
+  ],
+  "points": 11364,
+  "screenshots": [
+    "mesh.png",
+    "velocity.png",
+    "pressure.png",
+    "obstacles_zoom.png",
+    "streamlines.png"
+  ],
+  "time": 2501.0,
+  "timeCount": 8
+}

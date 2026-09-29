@@ -1,0 +1,40 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : mapFields -consistent ../cavity
+Date   : Jun 30 2026
+Time   : 08:40:35
+Host   : "123"
+PID    : 11906
+I/O    : uncollated
+Case   : /home/pavel/openfoam-lab/cavityFine
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Source: "/home/pavel/openfoam-lab" "cavity"
+Target: "/home/pavel/openfoam-lab" "cavityFine"
+
+Create databases as time
+
+Source time: 0s
+Target time: 0s
+Create meshes
+
+Source mesh size: 400	Target mesh size: 1600
+
+
+Consistently creating and mapping fields for time 0
+
+    interpolating p
+    interpolating U
+
+End
+

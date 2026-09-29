@@ -1,0 +1,123 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : decomposePar -latestTime -force
+Date   : Sep 13 2026
+Time   : 03:59:22
+Host   : "123"
+PID    : 19132
+I/O    : uncollated
+Case   : /media/sf_OpenFOAM_Labs/fast_finish_2026/LR6/nozzleShockFluidFresh
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Removing 0 existing processor directories
+
+Calculating distribution of cells
+
+Selecting decomposer scotch
+
+Finished decomposition in 0.034728 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 2000
+    Number of faces shared with processor 1 = 40
+    Number of processor patches = 1
+    Number of processor faces = 40
+    Number of boundary faces = 4140
+
+Processor 1
+    Number of cells = 2000
+    Number of faces shared with processor 0 = 40
+    Number of faces shared with processor 2 = 40
+    Number of processor patches = 2
+    Number of processor faces = 80
+    Number of boundary faces = 4100
+
+Processor 2
+    Number of cells = 2000
+    Number of faces shared with processor 1 = 40
+    Number of faces shared with processor 3 = 40
+    Number of processor patches = 2
+    Number of processor faces = 80
+    Number of boundary faces = 4100
+
+Processor 3
+    Number of cells = 2000
+    Number of faces shared with processor 2 = 40
+    Number of processor patches = 1
+    Number of processor faces = 40
+    Number of boundary faces = 4140
+
+Number of processor faces = 120
+Max number of cells = 2000 (0% above average 2000)
+Max number of processor patches = 2 (33.3333% above average 1.5)
+Max number of faces between processors = 80 (33.3333% above average 60)
+
+Time = 0.001s
+
+Decomposing FV fields
+
+    Decomposing volScalarFields
+
+        mag(U)
+--> FOAM Warning : 
+    From function const Foam::HashTable<Foam::List<int>, Foam::word>& Foam::polyBoundaryMesh::groupPatchIndices() const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 506
+    Removing patchGroup 'wall' which clashes with patch 3 of the same name.
+        p
+        T
+        rho
+
+    Decomposing volVectorFields
+
+        U
+
+    Decomposing surfaceScalarFields
+
+        phi
+
+Decomposing point fields
+
+    (no point fields)
+
+Distributing uniform files
+--> FOAM Warning : 
+    From function bool Foam::ln(const Foam::fileName&, const Foam::fileName&)
+    in file POSIX.C at line 941
+    symlink from "../../0.001/uniform" to "uniform" failed.
+--> FOAM Warning : 
+    From function bool Foam::ln(const Foam::fileName&, const Foam::fileName&)
+    in file POSIX.C at line 941
+    symlink from "../../0.001/uniform" to "uniform" failed.
+--> FOAM Warning : 
+    From function bool Foam::ln(const Foam::fileName&, const Foam::fileName&)
+    in file POSIX.C at line 941
+    symlink from "../../0.001/uniform" to "uniform" failed.
+--> FOAM Warning : 
+    From function bool Foam::ln(const Foam::fileName&, const Foam::fileName&)
+    in file POSIX.C at line 941
+    symlink from "../../0.001/uniform" to "uniform" failed.
+
+End
+

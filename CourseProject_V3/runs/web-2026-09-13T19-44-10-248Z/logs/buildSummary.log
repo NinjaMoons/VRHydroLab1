@@ -1,0 +1,127 @@
+/media/sf_OpenFOAM_Labs/CourseProject_V3/runs/web-2026-09-13T19-44-10-248Z/results/summary.json
+{
+  "dimensionless": {
+    "Re_H": 3429.4234592445328,
+    "Re_a": 1789.2644135188866
+  },
+  "evidence": {
+    "case": "case/",
+    "logs": "logs/",
+    "mesh": "Mesh.unv",
+    "screenshots": "screenshots/"
+  },
+  "flow": {
+    "imbalancePercent": 0.0,
+    "inletMagnitudeM3s": 3.45e-06,
+    "inletSignedM3s": -3.45e-06,
+    "outletMagnitudeM3s": 3.45e-06,
+    "outletSignedM3s": 3.45e-06
+  },
+  "mesh": {
+    "openfoam": {
+      "maxAspectRatio": 2.5618444,
+      "maxNonOrthogonalityDeg": 41.596905,
+      "maxSkewness": 2.5947718,
+      "meshOK": true,
+      "minDeterminant": 0.027537398
+    },
+    "salome": {
+      "cells": 5267,
+      "groups": {
+        "frontAndBack": 10534,
+        "inlet": 18,
+        "obstacles": 448,
+        "outlet": 18,
+        "walls": 524
+      },
+      "hexas": 5101,
+      "nodes": 11364,
+      "prisms": 166
+    }
+  },
+  "paraview": {
+    "cells": 5267,
+    "pointKinematicPressureRangeM2s2": [
+      -0.11030344665050507,
+      0.7070686221122742
+    ],
+    "pointPressureRangePa": [
+      -110.10490044653416,
+      705.7958985924721
+    ],
+    "pointVelocityMagnitudeRangeMps": [
+      0.0019175705592790397,
+      0.6964840110633473
+    ],
+    "points": 11364,
+    "screenshots": [
+      "mesh.png",
+      "velocity.png",
+      "pressure.png",
+      "obstacles_zoom.png",
+      "streamlines.png"
+    ],
+    "time": 2501.0,
+    "timeCount": 8
+  },
+  "pressure": {
+    "cellMaximumKinematicM2s2": 0.70806776,
+    "cellMaximumPa": 706.7932380320001,
+    "cellMinimumKinematicM2s2": -0.37940332,
+    "cellMinimumPa": -378.72039402400003,
+    "dropPa": 682.065777722,
+    "inletAreaAverageKinematicM2s2": 0.68329571,
+    "outletAreaAverageKinematicM2s2": 0.0
+  },
+  "runId": "web-2026-09-13T19-44-10-248Z",
+  "settings": {
+    "flow": {
+      "Uin": 0.15,
+      "nu": 1.006e-06,
+      "rho": 998.2,
+      "turbulenceModel": "kOmegaSST"
+    },
+    "geometryMm": {
+      "H": 23,
+      "L": 326,
+      "P": 60,
+      "R": 60,
+      "S": 30,
+      "Y": 8,
+      "a": 12
+    },
+    "mesh": {
+      "maxSizeMm": 1.25,
+      "minSizeMm": 0.6,
+      "obstacleSizeMm": 0.75,
+      "quadAllowed": true,
+      "quality": "Medium",
+      "thicknessMm": 1
+    },
+    "variant": 3
+  },
+  "solver": {
+    "algorithm": "transient PIMPLE",
+    "application": "foamRun -solver incompressibleFluid",
+    "completed": true,
+    "continuity": {
+      "cumulative": -5.6263104e-11,
+      "global": 6.4672568e-13,
+      "local": 1.0349089e-11
+    },
+    "courantMax": 0.69440651,
+    "courantMean": 0.08672564,
+    "finalDeltaT": 0.00036690532,
+    "finalTime": 2501.0,
+    "turbulenceModel": "kOmegaSST"
+  },
+  "status": "VERIFIED",
+  "velocity": {
+    "cellMaximumMagnitudeMps": 0.73750655,
+    "cellMinimumMagnitudeMps": 0.0012801085,
+    "paraviewPointMagnitudeRangeMps": [
+      0.0019175705592790397,
+      0.6964840110633473
+    ]
+  }
+}

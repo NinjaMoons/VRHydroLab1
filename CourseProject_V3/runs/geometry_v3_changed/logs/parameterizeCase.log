@@ -1,0 +1,46 @@
+CASE_PARAMETERS_OK
+{
+  "Re_H": 2485.0894632206764,
+  "Re_a": 1093.4393638170975,
+  "kInlet": 5.438707685309486e-05,
+  "obstacles": [
+    {
+      "name": "upper1",
+      "x": 104.0,
+      "y": 17.0
+    },
+    {
+      "name": "upper2",
+      "x": 166.0,
+      "y": 17.0
+    },
+    {
+      "name": "upper3",
+      "x": 228.0,
+      "y": 17.0
+    },
+    {
+      "name": "upper4",
+      "x": 290.0,
+      "y": 17.0
+    },
+    {
+      "name": "lower1",
+      "x": 135.0,
+      "y": 8.0
+    },
+    {
+      "name": "lower2",
+      "x": 197.0,
+      "y": 8.0
+    },
+    {
+      "name": "lower3",
+      "x": 259.0,
+      "y": 8.0
+    }
+  ],
+  "omegaInlet": 7.69394686383423,
+  "turbulenceIntensity": 0.0602146587098163,
+  "turbulenceLengthScaleM": 0.0017500000000000003
+}

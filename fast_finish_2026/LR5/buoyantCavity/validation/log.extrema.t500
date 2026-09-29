@@ -1,0 +1,7 @@
+LR5_EXTREMA_OK
+case= /media/sf_OpenFOAM_Labs/fast_finish_2026/LR5/buoyantCavity/buoyantCavity.foam
+available_times= [400.0, 450.0, 500.0]
+final_time= 500.0
+cells= 8000
+T_range_K= (295.0669860839844, 304.9330139160156)
+U_magnitude_range_m_s= (7.387406315571879e-06, 0.04099271504226707)

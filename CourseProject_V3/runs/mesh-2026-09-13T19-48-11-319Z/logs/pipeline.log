@@ -1,0 +1,6 @@
+[geometry] cwd=/media/sf_OpenFOAM_Labs/CourseProject_V3 command=/usr/bin/python3 /media/sf_OpenFOAM_Labs/CourseProject_V3/scripts/geometry.py /media/sf_OpenFOAM_Labs/CourseProject_V3/runs/mesh-2026-09-13T19-48-11-319Z/settings.json
+[salome] cwd=/media/sf_OpenFOAM_Labs/CourseProject_V3 command=/home/pavel/openfoam-lab/tools/SALOME-9.16.0/run_salome.sh -t /media/sf_OpenFOAM_Labs/CourseProject_V3/salome/generate_mesh.py
+[ideasUnvToFoam] cwd=/tmp/CourseProject_V3/jobs/mesh-2026-09-13T19-48-11-319Z/case command=ideasUnvToFoam /tmp/CourseProject_V3/jobs/mesh-2026-09-13T19-48-11-319Z/mesh/Mesh.unv
+[transformPoints] cwd=/tmp/CourseProject_V3/jobs/mesh-2026-09-13T19-48-11-319Z/case command=transformPoints scale=(0.001 0.001 0.001)
+[setPatchTypes] cwd=/tmp/CourseProject_V3/jobs/mesh-2026-09-13T19-48-11-319Z/case command=/usr/bin/python3 /media/sf_OpenFOAM_Labs/CourseProject_V3/scripts/set_patch_types.py /tmp/CourseProject_V3/jobs/mesh-2026-09-13T19-48-11-319Z/case/constant/polyMesh/boundary
+[checkMesh] cwd=/tmp/CourseProject_V3/jobs/mesh-2026-09-13T19-48-11-319Z/case command=checkMesh -allGeometry -allTopology

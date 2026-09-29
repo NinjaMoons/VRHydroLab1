@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-13",
+  "interface": "http://127.0.0.1:8083/",
+  "execution": "sequential, no MPI",
+  "baselinePreserved": true,
+  "tests": {
+    "A": {
+      "runId": "web-2026-09-13T19-40-02-511Z",
+      "mode": "full",
+      "input": {
+        "L_mm": 326,
+        "H_mm": 23,
+        "a_mm": 12,
+        "P_mm": 60,
+        "S_mm": 30,
+        "Y_mm": 8,
+        "R_mm": 60,
+        "Uin_m_s": 0.1,
+        "quality": "Medium"
+      },
+      "meshCells": 5267,
+      "meshOK": true,
+      "solverCompleted": true,
+      "summaryStatus": "VERIFIED",
+      "finalTime": 2501.0,
+      "maxVelocityMps": 0.46627868,
+      "pressureDropPa": 306.045544644,
+      "maxCourant": 0.6716507
+    },
+    "B": {
+      "runId": "web-2026-09-13T19-44-10-248Z",
+      "mode": "full",
+      "changedField": "Uin",
+      "changedValue": 0.15,
+      "storedUin": 0.15,
+      "openfoamUInternal": "(0.15 0 0)",
+      "kInlet": 0.00011290377522025816,
+      "omegaInlet": 12.049464001874926,
+      "meshCells": 5267,
+      "meshOK": true,
+      "solverCompleted": true,
+      "summaryStatus": "VERIFIED",
+      "Re_a": 1789.2644135188866,
+      "Re_H": 3429.4234592445328,
+      "maxVelocityMps": 0.73750655,
+      "pressureDropPa": 682.065777722,
+      "maxCourant": 0.69440651
+    },
+    "C": {
+      "runId": "mesh-2026-09-13T19-48-11-319Z",
+      "mode": "mesh-only",
+      "input": {
+        "L_mm": 350,
+        "H_mm": 25,
+        "a_mm": 11,
+        "P_mm": 62,
+        "S_mm": 31,
+        "Y_mm": 8,
+        "R_mm": 60,
+        "Uin_m_s": 0.1,
+        "quality": "Medium"
+      },
+      "hdfCreated": true,
+      "unvCreated": true,
+      "meshCells": 6518,
+      "meshNodes": 13856,
+      "meshOK": true,
+      "solverStarted": false
+    },
+    "D": {
+      "invalidGeometry": "S=5 mm with a=12 mm",
+      "invalidGeometryMessage": "S должно быть не меньше a",
+      "emptyFieldMessage": "L: заполните поле",
+      "nonNumericMessage": "L: требуется конечное число",
+      "rejectedBeforePipeline": true
+    },
+    "E": {
+      "isolatedRunRoot": "/tmp/cpv3-acceptance-failure-runs",
+      "failureRunner": "/bin/false",
+      "firstRunId": "web-2026-09-13T19-49-53-197Z",
+      "secondRunId": "web-2026-09-13T19-50-03-220Z",
+      "state": "failed",
+      "message": "Расчётный процесс завершился с кодом 1",
+      "formReenabled": true,
+      "subsequentRunAccepted": true
+    },
+    "conflictingLaunch": {
+      "duringRunId": "web-2026-09-13T19-44-10-248Z",
+      "httpStatus": 409,
+      "message": "Уже выполняется расчёт web-2026-09-13T19-44-10-248Z. Дождитесь его завершения."
+    },
+    "missingExpectedResult": {
+      "runId": "mesh-2026-09-13T19-48-11-319Z",
+      "reason": "mesh-only run intentionally has no CFD summary",
+      "httpStatus": 404,
+      "message": "Summary ещё не готов"
+    }
+  }
+}

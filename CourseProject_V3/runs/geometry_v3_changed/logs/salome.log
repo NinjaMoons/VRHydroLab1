@@ -1,0 +1,29 @@
+COURSEPROJECT_V3_SALOME_OK
+{
+  "edges": 2046,
+  "faces": 14057,
+  "files": {
+    "hdf": {
+      "bytes": 2458560,
+      "path": "/tmp/CourseProject_V3/jobs/geometry_v3_changed/mesh/CourseProject_V3.hdf"
+    },
+    "unv": {
+      "bytes": 4774556,
+      "path": "/tmp/CourseProject_V3/jobs/geometry_v3_changed/mesh/Mesh.unv"
+    }
+  },
+  "groups": {
+    "frontAndBack": 13036,
+    "inlet": 20,
+    "obstacles": 420,
+    "outlet": 20,
+    "walls": 561
+  },
+  "hexas": 6329,
+  "nodes": 13856,
+  "pentas": 189,
+  "quadranglesPerPlane": 6329,
+  "settings": "/media/sf_OpenFOAM_Labs/CourseProject_V3/runs/geometry_v3_changed/settings.json",
+  "trianglesPerPlane": 189,
+  "volumes": 6518
+}

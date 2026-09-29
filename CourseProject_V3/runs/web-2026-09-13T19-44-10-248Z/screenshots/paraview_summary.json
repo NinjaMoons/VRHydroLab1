@@ -1,0 +1,25 @@
+{
+  "cells": 5267,
+  "pointKinematicPressureRangeM2s2": [
+    -0.11030344665050507,
+    0.7070686221122742
+  ],
+  "pointPressureRangePa": [
+    -110.10490044653416,
+    705.7958985924721
+  ],
+  "pointVelocityMagnitudeRangeMps": [
+    0.0019175705592790397,
+    0.6964840110633473
+  ],
+  "points": 11364,
+  "screenshots": [
+    "mesh.png",
+    "velocity.png",
+    "pressure.png",
+    "obstacles_zoom.png",
+    "streamlines.png"
+  ],
+  "time": 2501.0,
+  "timeCount": 8
+}

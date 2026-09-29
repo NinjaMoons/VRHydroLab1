@@ -1,0 +1,27 @@
+# Git metadata used by Codex for this shared-folder workspace
+.gitdata/
+.git/
+.agents/
+.codex/
+
+# Generated caches and local environments
+**/__pycache__/
+**/*.py[cod]
+**/node_modules/
+**/.venv/
+**/venv/
+**/*.pid
+**/core
+
+# Reconstructible parallel decomposition
+**/processor*/
+
+# Local QA and duplicate transfer bundles
+tmp/
+CourseProject_V3_TRANSFER_FOR_CHATGPT/
+CourseProject_V3_TRANSFER_FOR_CHATGPT.zip
+LABS_TRANSFER_FOR_CHATGPT/
+LABS_TRANSFER_FOR_CHATGPT.zip
+
+# Large duplicate backups; the live project files are committed instead
+CourseProject_V3/backups/

@@ -1,0 +1,8 @@
+{
+  "pInput": 200000,
+  "tInput": 1800,
+  "pOutput": 9000,
+  "massFlow": 1.5,
+  "alpha": 14,
+  "beta": 28
+}

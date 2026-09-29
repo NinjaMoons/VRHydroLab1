@@ -1,0 +1,141 @@
+
+postProcess has been superseded and replaced by the more general foamPostProcess
+utility which will be executed instead:
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : foamPostProcess -func components(U)
+Date   : Aug 19 2026
+Time   : 22:12:43
+Host   : "123"
+PID    : 46454
+I/O    : uncollated
+Case   : /home/pavel/openfoam-lab/manual-lab2/cavity
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.1s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.2s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.3s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.4s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.5s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.6s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.7s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.8s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 0.9s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+Time = 1s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+    functionObjects::components components(U) writing field: Ux
+    functionObjects::components components(U) writing field: Uy
+    functionObjects::components components(U) writing field: Uz
+
+End
+

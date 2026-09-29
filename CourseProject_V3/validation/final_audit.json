@@ -1,0 +1,242 @@
+{
+  "remainingGuiEvidence": [
+    "screenshots/salome_geometry.png",
+    "screenshots/salome_mesh.png",
+    "screenshots/salome_groups.png"
+  ],
+  "status": "PASS_WITH_GUI_EVIDENCE_PENDING",
+  "verifiedFullRuns": [
+    {
+      "Re_a": 1192.8429423459245,
+      "accepted": true,
+      "cells": 5267,
+      "images": [
+        {
+          "bytes": 56160,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/baseline_v3_u0p1/screenshots/mesh.png",
+          "width": 1600
+        },
+        {
+          "bytes": 40929,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/baseline_v3_u0p1/screenshots/velocity.png",
+          "width": 1600
+        },
+        {
+          "bytes": 26053,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/baseline_v3_u0p1/screenshots/pressure.png",
+          "width": 1600
+        },
+        {
+          "bytes": 82004,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/baseline_v3_u0p1/screenshots/streamlines.png",
+          "width": 1600
+        },
+        {
+          "bytes": 172281,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/baseline_v3_u0p1/screenshots/obstacles_zoom.png",
+          "width": 1600
+        }
+      ],
+      "run": "baseline_v3_u0p1"
+    },
+    {
+      "Re_a": 1789.2644135188866,
+      "accepted": true,
+      "cells": 5267,
+      "images": [
+        {
+          "bytes": 56160,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/speed_v3_u0p15/screenshots/mesh.png",
+          "width": 1600
+        },
+        {
+          "bytes": 40241,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/speed_v3_u0p15/screenshots/velocity.png",
+          "width": 1600
+        },
+        {
+          "bytes": 26408,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/speed_v3_u0p15/screenshots/pressure.png",
+          "width": 1600
+        },
+        {
+          "bytes": 80236,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/speed_v3_u0p15/screenshots/streamlines.png",
+          "width": 1600
+        },
+        {
+          "bytes": 168397,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/speed_v3_u0p15/screenshots/obstacles_zoom.png",
+          "width": 1600
+        }
+      ],
+      "run": "speed_v3_u0p15"
+    },
+    {
+      "Re_a": 1093.4393638170975,
+      "accepted": true,
+      "cells": 6518,
+      "images": [
+        {
+          "bytes": 56559,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/geometry_v3_changed/screenshots/mesh.png",
+          "width": 1600
+        },
+        {
+          "bytes": 40676,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/geometry_v3_changed/screenshots/velocity.png",
+          "width": 1600
+        },
+        {
+          "bytes": 26626,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/geometry_v3_changed/screenshots/pressure.png",
+          "width": 1600
+        },
+        {
+          "bytes": 90393,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/geometry_v3_changed/screenshots/streamlines.png",
+          "width": 1600
+        },
+        {
+          "bytes": 180791,
+          "format": "PNG",
+          "height": 600,
+          "path": "runs/geometry_v3_changed/screenshots/obstacles_zoom.png",
+          "width": 1600
+        }
+      ],
+      "run": "geometry_v3_changed"
+    }
+  ],
+  "verifiedProjectArtifacts": [
+    {
+      "artifact": "settings.json",
+      "bytes": 415
+    },
+    {
+      "artifact": "salome/generate_mesh.py",
+      "bytes": 9833
+    },
+    {
+      "artifact": "salome/final/CourseProject_V3.hdf",
+      "bytes": 2071804
+    },
+    {
+      "artifact": "salome/final/Mesh.unv",
+      "bytes": 3944944
+    },
+    {
+      "artifact": "app/server.js",
+      "bytes": 11323
+    },
+    {
+      "artifact": "scripts/run_pipeline.py",
+      "bytes": 11188
+    },
+    {
+      "artifact": "postprocessing/render_results.py",
+      "bytes": 6392
+    },
+    {
+      "artifact": "docs/REPORT_DRAFT.md",
+      "bytes": 33378
+    },
+    {
+      "artifact": "docs/DEFENSE_CHEATSHEET.md",
+      "bytes": 10535
+    }
+  ],
+  "verifiedScreenshots": [
+    {
+      "bytes": 203845,
+      "format": "JPEG",
+      "height": null,
+      "path": "screenshots/app_default.jpg",
+      "width": null
+    },
+    {
+      "bytes": 204728,
+      "format": "JPEG",
+      "height": null,
+      "path": "screenshots/app_changed.jpg",
+      "width": null
+    },
+    {
+      "bytes": 199229,
+      "format": "JPEG",
+      "height": null,
+      "path": "screenshots/app_running.jpg",
+      "width": null
+    },
+    {
+      "bytes": 205408,
+      "format": "JPEG",
+      "height": null,
+      "path": "screenshots/app_complete.jpg",
+      "width": null
+    },
+    {
+      "bytes": 56160,
+      "format": "PNG",
+      "height": 600,
+      "path": "screenshots/openfoam_mesh.png",
+      "width": 1600
+    },
+    {
+      "bytes": 40929,
+      "format": "PNG",
+      "height": 600,
+      "path": "screenshots/velocity.png",
+      "width": 1600
+    },
+    {
+      "bytes": 26053,
+      "format": "PNG",
+      "height": 600,
+      "path": "screenshots/pressure.png",
+      "width": 1600
+    },
+    {
+      "bytes": 82004,
+      "format": "PNG",
+      "height": 600,
+      "path": "screenshots/streamlines.png",
+      "width": 1600
+    },
+    {
+      "bytes": 172281,
+      "format": "PNG",
+      "height": 600,
+      "path": "screenshots/obstacles_zoom.png",
+      "width": 1600
+    }
+  ]
+}

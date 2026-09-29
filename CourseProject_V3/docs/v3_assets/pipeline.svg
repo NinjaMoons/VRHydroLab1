@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="420" viewBox="0 0 1800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Последовательность автоматизированного расчёта</title>
+  <desc id="desc">Пользователь, Web UI, Node.js, settings.json, SALOME, HDF и UNV, OpenFOAM, ParaView, результат.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef5f3"/>
+      <stop offset="1" stop-color="#ddeae7"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#0d8178"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#9bb6b2;stroke-width:2;rx:16}
+      .main{font:700 24px 'Segoe UI',Arial,sans-serif;fill:#15323a;text-anchor:middle}
+      .sub{font:400 17px 'Segoe UI',Arial,sans-serif;fill:#60777c;text-anchor:middle}
+      .arrow{stroke:#0d8178;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .accent{fill:#123a44;stroke:#123a44}
+      .accentText{fill:#fff}
+    </style>
+  </defs>
+  <rect width="1800" height="420" rx="24" fill="url(#bg)"/>
+  <text x="900" y="58" class="main" style="font-size:30px">Автоматизированная последовательность расчёта</text>
+  <g transform="translate(30 130)">
+    <rect class="box" width="160" height="120"/>
+    <text class="main" x="80" y="53">Пользователь</text><text class="sub" x="80" y="83">ввод параметров</text>
+  </g>
+  <path class="arrow" d="M195 190H225"/>
+  <g transform="translate(235 130)">
+    <rect class="box accent" width="150" height="120"/>
+    <text class="main accentText" x="75" y="53">Web UI</text><text class="sub accentText" x="75" y="83">HTML · CSS · JS</text>
+  </g>
+  <path class="arrow" d="M390 190H420"/>
+  <g transform="translate(430 130)">
+    <rect class="box" width="150" height="120"/>
+    <text class="main" x="75" y="53">Node.js</text><text class="sub" x="75" y="83">проверка и API</text>
+  </g>
+  <path class="arrow" d="M585 190H615"/>
+  <g transform="translate(625 130)">
+    <rect class="box" width="170" height="120"/>
+    <text class="main" x="85" y="53">settings.json</text><text class="sub" x="85" y="83">параметры запуска</text>
+  </g>
+  <path class="arrow" d="M800 190H830"/>
+  <g transform="translate(840 130)">
+    <rect class="box accent" width="150" height="120"/>
+    <text class="main accentText" x="75" y="53">SALOME</text><text class="sub accentText" x="75" y="83">геометрия и сетка</text>
+  </g>
+  <path class="arrow" d="M995 190H1025"/>
+  <g transform="translate(1035 130)">
+    <rect class="box" width="160" height="120"/>
+    <text class="main" x="80" y="53">HDF / UNV</text><text class="sub" x="80" y="83">модель и обмен</text>
+  </g>
+  <path class="arrow" d="M1200 190H1230"/>
+  <g transform="translate(1240 130)">
+    <rect class="box accent" width="160" height="120"/>
+    <text class="main accentText" x="80" y="53">OpenFOAM</text><text class="sub accentText" x="80" y="83">CFD-расчёт</text>
+  </g>
+  <path class="arrow" d="M1405 190H1435"/>
+  <g transform="translate(1445 130)">
+    <rect class="box" width="150" height="120"/>
+    <text class="main" x="75" y="53">ParaView</text><text class="sub" x="75" y="83">поля и линии тока</text>
+  </g>
+  <path class="arrow" d="M1600 190H1630"/>
+  <g transform="translate(1640 130)">
+    <rect class="box accent" width="130" height="120"/>
+    <text class="main accentText" x="65" y="53">Результат</text><text class="sub accentText" x="65" y="83">PNG · JSON</text>
+  </g>
+  <text x="900" y="330" class="sub" style="font-size:20px">Каждый этап получает подготовленные данные предыдущего этапа и сохраняет проверяемый результат.</text>
+</svg>

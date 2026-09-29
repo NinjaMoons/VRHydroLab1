@@ -1,0 +1,6 @@
+PATCH_TYPES_OK
+inlet=patch
+outlet=patch
+walls=wall
+obstacles=wall
+frontAndBack=empty

@@ -1,0 +1,8 @@
+{
+  "state": "done",
+  "job": "2026-09-13T01-50-54-310Z",
+  "case": "/tmp/lr7-nozzle-web-runs/2026-09-13T01-50-54-310Z/case",
+  "analytic": "/tmp/lr7-nozzle-web-runs/2026-09-13T01-50-54-310Z/analytic.json",
+  "resultTime": 0.015,
+  "result": "/tmp/lr7-nozzle-web-runs/2026-09-13T01-50-54-310Z/result.png"
+}

@@ -1,0 +1,19 @@
+[geometry] cwd=/media/sf_OpenFOAM_Labs/CourseProject_V3 command=/usr/bin/python3 /media/sf_OpenFOAM_Labs/CourseProject_V3/scripts/geometry.py /media/sf_OpenFOAM_Labs/CourseProject_V3/runs/web-2026-09-13T19-44-10-248Z/settings.json
+[salome] cwd=/media/sf_OpenFOAM_Labs/CourseProject_V3 command=/home/pavel/openfoam-lab/tools/SALOME-9.16.0/run_salome.sh -t /media/sf_OpenFOAM_Labs/CourseProject_V3/salome/generate_mesh.py
+[ideasUnvToFoam] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=ideasUnvToFoam /tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/mesh/Mesh.unv
+[transformPoints] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=transformPoints scale=(0.001 0.001 0.001)
+[setPatchTypes] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=/usr/bin/python3 /media/sf_OpenFOAM_Labs/CourseProject_V3/scripts/set_patch_types.py /tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case/constant/polyMesh/boundary
+[checkMesh] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=checkMesh -allGeometry -allTopology
+[parameterizeCase] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=/usr/bin/python3 /media/sf_OpenFOAM_Labs/CourseProject_V3/scripts/parameterize_case.py /tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case /media/sf_OpenFOAM_Labs/CourseProject_V3/runs/web-2026-09-13T19-44-10-248Z/settings.json
+[solver_steady] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamRun -solver incompressibleFluid
+[solver_transient] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamRun -solver incompressibleFluid
+[flow_inlet] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func patchFlowRate(name=inlet,patch=inlet)
+[flow_outlet] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func patchFlowRate(name=outlet,patch=outlet)
+[p_inlet] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func patchAverage(name=pInlet,patch=inlet,field=p)
+[p_outlet] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func patchAverage(name=pOutlet,patch=outlet,field=p)
+[u_max] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func cellMaxMag(U)
+[u_min] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func cellMinMag(U)
+[p_max] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func cellMax(p)
+[p_min] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=foamPostProcess -latestTime -func cellMin(p)
+[paraview] cwd=/tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case command=/home/pavel/openfoam-lab/tools/ParaView-6.1.1-MPI-Linux-Python3.12-x86_64/bin/pvpython /media/sf_OpenFOAM_Labs/CourseProject_V3/postprocessing/render_results.py /tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/case/course_project.foam /tmp/CourseProject_V3/jobs/web-2026-09-13T19-44-10-248Z/screenshots --rho 998.2
+[buildSummary] cwd=/media/sf_OpenFOAM_Labs/CourseProject_V3 command=/usr/bin/python3 /media/sf_OpenFOAM_Labs/CourseProject_V3/scripts/build_summary.py /media/sf_OpenFOAM_Labs/CourseProject_V3/runs/web-2026-09-13T19-44-10-248Z --mesh-summary /media/sf_OpenFOAM_Labs/CourseProject_V3/runs/web-2026-09-13T19-44-10-248Z/mesh_summary.json

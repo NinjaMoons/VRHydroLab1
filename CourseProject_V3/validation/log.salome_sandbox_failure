@@ -1,0 +1,4 @@
+terminate called after throwing an instance of 'CORBA::INITIALIZE'
+Aborted (core dumped)
+ERROR:salomeContext:SystemExit 1 in method _sessionless.
+ERROR : 20:12:16.540 : SystemExit 1 in method _sessionless. ( callsite is _startSalome of file "/home/pavel/openfoam-lab/tools/SALOME-9.16.0/BINARIES-CO8/KERNEL/bin/salome/salomeContext.py" at line 372 ) 

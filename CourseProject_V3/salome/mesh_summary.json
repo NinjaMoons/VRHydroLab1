@@ -1,0 +1,26 @@
+{
+  "edges": 1855,
+  "faces": 18130,
+  "files": {
+    "hdf": {
+      "bytes": 2361253,
+      "path": "/media/sf_OpenFOAM_Labs/CourseProject_V3/salome/CourseProject_V3.hdf"
+    },
+    "unv": {
+      "bytes": 4785004,
+      "path": "/media/sf_OpenFOAM_Labs/CourseProject_V3/salome/Mesh.unv"
+    }
+  },
+  "groups": {
+    "frontAndBack": 17204,
+    "inlet": 15,
+    "obstacles": 448,
+    "outlet": 15,
+    "walls": 448
+  },
+  "nodes": 9516,
+  "pentas": 8602,
+  "settings": "/media/sf_OpenFOAM_Labs/CourseProject_V3/settings.json",
+  "trianglesPerPlane": 8602,
+  "volumes": 8602
+}

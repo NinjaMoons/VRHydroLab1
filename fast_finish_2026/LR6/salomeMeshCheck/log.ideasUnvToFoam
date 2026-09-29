@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : ideasUnvToFoam Mesh.unv
+Date   : Sep 13 2026
+Time   : 03:01:18
+Host   : "123"
+PID    : 367
+I/O    : uncollated
+Case   : /media/sf_OpenFOAM_Labs/fast_finish_2026/LR6/salomeMeshCheck
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Processing tag:164
+Starting reading units at line 3.
+l:1
+units:"  SI: Meter (newton)"
+unitType:2
+Unit factors:
+    Length scale       : 1
+    Force scale        : 1
+    Temperature scale  : 1
+    Temperature offset : 273.15
+
+
+Processing tag:2420
+Skipping tag 2420 on line 9
+Skipping section at line 9.
+
+Processing tag:2411
+Starting reading points at line 20.
+Read 16482 points.
+
+Processing tag:2412
+Starting reading cells at line 32987.
+First occurrence of element type 11 for cell 1 at line 32988
+First occurrence of element type 44 for cell 1047 at line 36126
+First occurrence of element type 115 for cell 17567 at line 69166
+Read 8000 cells and 16520 boundary faces.
+
+Processing tag:2467
+Starting reading patches at line 85168.
+For group 1 named inlet trying to read 40 patch face indices.
+For group 2 named outlet trying to read 40 patch face indices.
+For group 3 named axis trying to read 200 patch face indices.
+For group 4 named wall trying to read 200 patch face indices.
+For group 5 named frontAndBack trying to read 16000 patch face indices.
+
+Of 16520 so-called boundary faces 40 belong to two cells and are therefore internal
+Sorting boundary faces according to group (patch)
+0: inlet is patch
+1: outlet is patch
+2: axis is patch
+3: wall is patch
+4: frontAndBack is patch
+
+Constructing mesh with non-default patches of size:
+    inlet	40
+    outlet	40
+    axis	200
+    wall	200
+    frontAndBack	16000
+
+End
+

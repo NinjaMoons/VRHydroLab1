@@ -1,0 +1,6 @@
+{
+  "state": "prepared",
+  "job": "smoke-shockfluid-20260913",
+  "case": "/media/sf_OpenFOAM_Labs/fast_finish_2026/LR7/webapp/runs/smoke-shockfluid-20260913/case",
+  "analytic": "/media/sf_OpenFOAM_Labs/fast_finish_2026/LR7/webapp/runs/smoke-shockfluid-20260913/analytic.json"
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Естественная конвекция — OpenFOAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <section class="visual" aria-label="Схема полости">
+      <div class="hot">305 K ↑</div><div class="flow">↻</div><div class="cold">↓ 295 K</div>
+    </section>
+    <section class="content">
+      <p class="eyebrow">Лабораторная работа №5</p>
+      <h1>Естественная конвекция</h1>
+      <p class="lede">Параметрический запуск реального case OpenFOAM в отдельной рабочей копии.</p>
+      <form id="form">
+        <label>Сторона полости, мм<input name="sideMm" type="number" min="20" max="500" step="1" value="100" required></label>
+        <label>Холодная стенка, K<input name="coldK" type="number" min="200" max="1000" step="0.1" value="295" required></label>
+        <label>Горячая стенка, K<input name="hotK" type="number" min="200" max="1000" step="0.1" value="305" required></label>
+        <button type="submit">Запустить расчёт</button>
+      </form>
+      <div id="status" class="status">Готово к запуску</div>
+      <pre id="log" hidden></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+

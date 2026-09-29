@@ -1,0 +1,8 @@
+{
+  "message": "Mesh OK, solver End, summary и изображения готовы",
+  "progressPercent": 100,
+  "runId": "geometry_v3_changed",
+  "stage": "Завершено",
+  "stageKey": "postprocess",
+  "state": "done"
+}

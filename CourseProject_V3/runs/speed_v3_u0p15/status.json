@@ -1,0 +1,8 @@
+{
+  "message": "Mesh OK, solver End, summary и изображения готовы",
+  "progressPercent": 100,
+  "runId": "speed_v3_u0p15",
+  "stage": "Завершено",
+  "stageKey": "postprocess",
+  "state": "done"
+}

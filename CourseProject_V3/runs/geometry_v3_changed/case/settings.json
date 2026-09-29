@@ -1,0 +1,26 @@
+{
+  "variant": 3,
+  "geometryMm": {
+    "L": 350.0,
+    "H": 25.0,
+    "a": 11.0,
+    "P": 62.0,
+    "S": 31.0,
+    "Y": 8.0,
+    "R": 60.0
+  },
+  "flow": {
+    "Uin": 0.1,
+    "nu": 1.006e-6,
+    "rho": 998.2,
+    "turbulenceModel": "kOmegaSST"
+  },
+  "mesh": {
+    "quality": "Medium",
+    "maxSizeMm": 1.25,
+    "minSizeMm": 0.6,
+    "obstacleSizeMm": 0.75,
+    "quadAllowed": true,
+    "thicknessMm": 1.0
+  }
+}

@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : ideasUnvToFoam Mesh_1.unv
+Date   : Sep 13 2026
+Time   : 02:31:11
+Host   : "123"
+PID    : 367
+I/O    : uncollated
+Case   : /media/sf_OpenFOAM_Labs/fast_finish_2026/LR3/damBreakLaminar
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Processing tag:164
+Starting reading units at line 3.
+l:1
+units:"  SI: Meter (newton)"
+unitType:2
+Unit factors:
+    Length scale       : 1
+    Force scale        : 1
+    Temperature scale  : 1
+    Temperature offset : 273.15
+
+
+Processing tag:2420
+Skipping tag 2420 on line 9
+Skipping section at line 9.
+
+Processing tag:2411
+Starting reading points at line 20.
+Read 4222 points.
+
+Processing tag:2412
+Starting reading cells at line 8467.
+First occurrence of element type 11 for cell 1 at line 8468
+First occurrence of element type 44 for cell 641 at line 10388
+First occurrence of element type 115 for cell 4987 at line 19080
+Read 2016 cells and 4346 boundary faces.
+
+Processing tag:2467
+Starting reading patches at line 23114.
+For group 1 named leftWall trying to read 46 patch face indices.
+For group 2 named rightWall trying to read 46 patch face indices.
+For group 3 named lowerWall trying to read 52 patch face indices.
+For group 4 named atmosphere trying to read 44 patch face indices.
+For group 5 named frontAndBack trying to read 4032 patch face indices.
+
+Of 4346 so-called boundary faces 126 belong to two cells and are therefore internal
+Sorting boundary faces according to group (patch)
+0: leftWall is patch
+1: rightWall is patch
+2: lowerWall is patch
+3: atmosphere is patch
+4: frontAndBack is patch
+
+Constructing mesh with non-default patches of size:
+    leftWall	46
+    rightWall	46
+    lowerWall	52
+    atmosphere	44
+    frontAndBack	4032
+
+End
+

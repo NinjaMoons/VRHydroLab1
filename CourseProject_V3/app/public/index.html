@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Канал V3 · SALOME + OpenFOAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="mark">V3</span><strong>Системы инженерного анализа</strong></div>
+    <span class="stack">SALOME 9.16 · OpenFOAM 13 · ParaView 6.1</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Курсовой проект · вариант № 3</p>
+        <h1>Расчёт течения воды в канале с препятствиями</h1>
+        <p class="lead">Задайте размеры канала и скорость воды. Схема справа сразу показывает, какой элемент изменяет выбранное поле.</p>
+      </div>
+      <div class="hero-metrics" aria-label="Расчётные показатели">
+        <div><span>Re<sub>a</sub></span><strong id="reA">—</strong></div>
+        <div><span>Re<sub>H</sub></span><strong id="reH">—</strong></div>
+        <div><span>Препятствий</span><strong>7</strong></div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel controls">
+        <div class="panel-title"><span>01</span><div><h2>Исходные параметры</h2><p>Размеры — в миллиметрах, скорость — в метрах в секунду</p></div></div>
+        <form id="parameters">
+          <fieldset class="parameter-group geometry-group">
+            <legend>Геометрия</legend>
+            <div class="input-grid">
+              <label data-param="L" title="Полная длина канала."><span>Длина канала, <b>L</b></span><span class="input-row"><input name="L" type="number" min="100" max="1000" step="1" required><small>мм</small></span></label>
+              <label data-param="H" title="Расстояние между нижней и верхней стенками."><span>Высота канала, <b>H</b></span><span class="input-row"><input name="H" type="number" min="15" max="200" step="1" required><small>мм</small></span></label>
+              <label data-param="a" title="Сторона каждого квадратного препятствия."><span>Сторона препятствия, <b>a</b></span><span class="input-row"><input name="a" type="number" min="2" max="50" step="1" required><small>мм</small></span></label>
+              <label data-param="P" title="Расстояние между центрами соседних препятствий одного ряда."><span>Шаг препятствий одного ряда, <b>P</b></span><span class="input-row"><input name="P" type="number" min="10" max="250" step="1" required><small>мм</small></span></label>
+              <label data-param="S" title="Горизонтальное смещение нижнего ряда относительно верхнего."><span>Смещение шахматного ряда, <b>S</b></span><span class="input-row"><input name="S" type="number" min="1" max="250" step="1" required><small>мм</small></span></label>
+              <label data-param="Y" title="Расстояние от стенки до центра ближайшего препятствия."><span>От стенки до центра, <b>Y</b></span><span class="input-row"><input name="Y" type="number" min="1" max="199" step="1" required><small>мм</small></span></label>
+              <label data-param="R" title="Расстояние от центра последнего верхнего препятствия до выхода."><span>До выходной границы, <b>R</b></span><span class="input-row"><input name="R" type="number" min="10" max="500" step="1" required><small>мм</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="parameter-group flow-group">
+            <legend>Поток</legend>
+            <label class="flow-field" data-param="Uin" title="Скорость воды на входной границе."><span>Скорость воды на входе, <b>Uin</b></span><span class="input-row"><input name="Uin" type="number" min="0.005" max="2" step="0.005" required><small>м/с</small></span></label>
+          </fieldset>
+
+          <fieldset class="parameter-group mesh-group">
+            <legend>Сетка</legend>
+            <label class="quality" title="Предустановка размера элементов сетки."><span>Качество сетки</span><select name="quality"><option value="Coarse">Черновая (Coarse)</option><option value="Medium" selected>Стандартная (Medium)</option><option value="Fine">Подробная (Fine)</option></select></label>
+          </fieldset>
+
+          <div id="validation" class="validation" role="status">Проверка параметров…</div>
+          <div class="actions"><button type="button" id="reset">Восстановить исходные</button><button type="button" id="validateButton">Проверить параметры</button><button type="button" id="meshButton">Создать сетку</button><button type="submit" class="primary">Запустить расчёт</button></div>
+        </form>
+      </aside>
+
+      <section class="panel model">
+        <div class="panel-title"><span>02</span><div><h2>Схема варианта № 3</h2><p>Наведите курсор на поле или выберите его — соответствующий размер подсветится</p></div></div>
+        <div class="drawing-wrap"><svg id="channel" viewBox="0 0 1100 390" role="img" aria-label="Параметрическая схема канала варианта № 3"></svg></div>
+        <div class="legend"><span><i class="water"></i>Вода</span><span><i class="solid"></i>Квадратные препятствия</span><span><i class="dimension"></i>Размеры варианта</span><span><i class="flow"></i>Скорость на входе</span></div>
+        <div class="coordinates" id="coordinates"></div>
+      </section>
+    </section>
+
+    <section class="panel run-panel">
+      <div class="panel-title"><span>03</span><div><h2>Ход расчёта</h2><p>Все этапы выполняются последовательно, без MPI</p></div></div>
+      <div class="stage-row" id="stages">
+        <div data-stage="validate">Параметры</div><div data-stage="salome">SALOME</div><div data-stage="mesh">Проверка сетки</div><div data-stage="case">OpenFOAM</div><div data-stage="solver">Расчёт</div><div data-stage="postprocess">Постобработка</div><div data-stage="save">Сохранение</div><div data-stage="complete">Готово</div>
+      </div>
+      <div class="run-meta"><strong id="status">Готово к запуску</strong><span id="runId">baseline_v3_u0p1</span></div>
+      <div id="completionBanner" class="completion" hidden></div>
+    </section>
+
+    <section class="results">
+      <div class="section-head"><div><p class="eyebrow">Сохранённые расчёты</p><h2>Результаты выбранного расчёта</h2></div><select id="runSelect" aria-label="Расчёт"></select></div>
+      <div class="result-summary panel">
+        <div><h3>Использованные параметры</h3><div id="resultInputs" class="result-inputs"></div></div>
+        <div><h3>Состояние и время</h3><div id="resultMeta" class="result-inputs"></div></div>
+        <div class="result-actions"><button type="button" id="logButton">Показать журнал</button><button type="button" id="openParaView">Открыть в ParaView</button><button type="button" id="newCalculation">Новый расчёт</button></div>
+      </div>
+      <pre id="log" hidden></pre>
+      <div class="result-metrics" id="resultMetrics"></div>
+      <div class="result-tabs" role="tablist" aria-label="Вид результата">
+        <button type="button" role="tab" class="active" data-result-image="velocity.png" data-result-caption="Модуль скорости |U|, м/с">Скорость</button>
+        <button type="button" role="tab" data-result-image="pressure.png" data-result-caption="Давление p, Па">Давление</button>
+        <button type="button" role="tab" data-result-image="streamlines.png" data-result-caption="Линии тока через массив препятствий">Линии тока</button>
+        <button type="button" role="tab" data-result-image="obstacles_zoom.png" data-result-caption="Локальный вид течения около препятствий">Локальный вид</button>
+        <button type="button" role="tab" data-result-image="mesh.png" data-result-caption="Расчётная сетка">Сетка</button>
+      </div>
+      <figure class="result-viewer">
+        <img id="resultImage" data-image="velocity.png" alt="Модуль скорости">
+        <figcaption id="resultCaption">Модуль скорости |U|, м/с</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer>CourseProject_V3 · результаты сохраняются отдельно для каждого расчёта</footer>
+  <script src="app.js"></script>
+</body>
+</html>

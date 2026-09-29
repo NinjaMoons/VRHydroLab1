@@ -1,0 +1,77 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : ideasUnvToFoam /tmp/CourseProject_V3/jobs/geometry_v3_changed/mesh/Mesh.unv
+Date   : Sep 13 2026
+Time   : 20:42:43
+Host   : "123"
+PID    : 68063
+I/O    : uncollated
+Case   : /tmp/CourseProject_V3/jobs/geometry_v3_changed/case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Processing tag:164
+Starting reading units at line 3.
+l:1
+units:"  SI: Meter (newton)"
+unitType:2
+Unit factors:
+    Length scale       : 1
+    Force scale        : 1
+    Temperature scale  : 1
+    Temperature offset : 273.15
+
+
+Processing tag:2420
+Skipping tag 2420 on line 9
+Skipping section at line 9.
+
+Processing tag:2411
+Starting reading points at line 20.
+Read 13856 points.
+
+Processing tag:2412
+Starting reading cells at line 27735.
+First occurrence of element type 11 for cell 1 at line 27736
+First occurrence of element type 44 for cell 2047 at line 33874
+First occurrence of element type 41 for cell 2149 at line 34078
+First occurrence of element type 115 for cell 16104 at line 61988
+First occurrence of element type 112 for cell 16206 at line 62192
+Read 6518 cells and 14057 boundary faces.
+
+Processing tag:2467
+Starting reading patches at line 75026.
+For group 1 named inlet trying to read 20 patch face indices.
+For group 2 named outlet trying to read 20 patch face indices.
+For group 3 named walls trying to read 561 patch face indices.
+For group 4 named obstacles trying to read 420 patch face indices.
+For group 5 named frontAndBack trying to read 13036 patch face indices.
+
+Found 6518 reversed boundary faces out of 14057
+Sorting boundary faces according to group (patch)
+0: inlet is patch
+1: outlet is patch
+2: walls is patch
+3: obstacles is patch
+4: frontAndBack is patch
+
+Constructing mesh with non-default patches of size:
+    inlet	20
+    outlet	20
+    walls	561
+    obstacles	420
+    frontAndBack	13036
+
+End
+

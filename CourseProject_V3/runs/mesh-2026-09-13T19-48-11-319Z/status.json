@@ -1,0 +1,8 @@
+{
+  "message": "UNV экспортирован, импорт OpenFOAM и checkMesh завершены: Mesh OK",
+  "runId": "mesh-2026-09-13T19-48-11-319Z",
+  "stage": "Сетка готова",
+  "stageKey": "mesh",
+  "state": "done",
+  "updatedAt": "2026-09-13T19:48:32.248817+00:00"
+}

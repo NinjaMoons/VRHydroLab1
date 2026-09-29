@@ -1,0 +1,65 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : foamRun -solver incompressibleFluid
+Date   : Sep 13 2026
+Time   : 20:17:40
+Host   : "123"
+PID    : 385
+I/O    : uncollated
+Case   : /tmp/CourseProject_V3/reference_transient
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 2500
+
+Selecting solver incompressibleFluid
+Selecting viscosity model constant
+Selecting turbulence model type RAS
+    Selecting RAS turbulence model kOmegaSST
+        Selecting generalised Newtonian model Newtonian
+No MRF models present
+
+Selecting patchDistMethod meshWave
+Courant Number mean: 155.87295 max: 1213.5126
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: Operating solver in transient mode with 1 outer corrector
+PIMPLE: Operating solver in PISO mode
+
+
+
+Starting time loop
+
+Courant Number mean: 155.87295 max: 1213.5126
+deltaT = 0.00057636888
+--> FOAM Warning : 
+    From function virtual Foam::Time& Foam::Time::operator++()
+    in file db/Time/Time.C at line 1304
+    Increased the timePrecision from 4 to 8 to distinguish between timeNames at time 2500.0006
+Time = 2500.0006s
+
+
+
+--> FOAM FATAL IO ERROR: 
+keyword UFinal is undefined in dictionary "/tmp/CourseProject_V3/reference_transient/system/fvSolution/solvers"
+
+file: /tmp/CourseProject_V3/reference_transient/system/fvSolution/solvers from line 11 to 32.
+
+    From function const Foam::dictionary& Foam::dictionary::subDict(const Foam::word&) const
+    in file db/dictionary/dictionary.C at line 855.
+
+FOAM exiting
+

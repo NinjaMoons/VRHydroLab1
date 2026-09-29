@@ -1,0 +1,6 @@
+{
+  "state": "prepared",
+  "job": "smoke-2026-09-13T00-00-01Z",
+  "case": "/media/sf_OpenFOAM_Labs/fast_finish_2026/LR7/webapp/runs/smoke-2026-09-13T00-00-01Z/case",
+  "analytic": "/media/sf_OpenFOAM_Labs/fast_finish_2026/LR7/webapp/runs/smoke-2026-09-13T00-00-01Z/analytic.json"
+}

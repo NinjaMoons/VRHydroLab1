@@ -1,0 +1,6 @@
+{
+  "state": "failed",
+  "job": "smoke-2026-09-13T00-00-00Z",
+  "error": "Не удалось обновить p internal",
+  "case": "/media/sf_OpenFOAM_Labs/fast_finish_2026/LR7/webapp/runs/smoke-2026-09-13T00-00-00Z/case"
+}

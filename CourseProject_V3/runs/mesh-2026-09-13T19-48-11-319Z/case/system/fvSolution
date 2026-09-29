@@ -1,0 +1,62 @@
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+
+solvers
+{
+    p
+    {
+        solver          GAMG;
+        tolerance       1e-08;
+        relTol          0.05;
+        smoother        GaussSeidel;
+    }
+
+    pcorr
+    {
+        solver          GAMG;
+        tolerance       1e-08;
+        relTol          0;
+        smoother        GaussSeidel;
+    }
+
+    "(U|k|omega)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-08;
+        relTol          0.05;
+    }
+}
+
+SIMPLE
+{
+    nNonOrthogonalCorrectors 1;
+    consistent      yes;
+
+    residualControl
+    {
+        p               1e-05;
+        U               1e-05;
+        k               1e-05;
+        omega           1e-05;
+    }
+}
+
+relaxationFactors
+{
+    fields
+    {
+        p               0.3;
+    }
+    equations
+    {
+        U               0.7;
+        k               0.5;
+        omega           0.5;
+    }
+}

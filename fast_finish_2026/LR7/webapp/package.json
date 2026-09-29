@@ -1,0 +1,7 @@
+{
+  "name": "lr7-nozzle-launcher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free LR7 OpenFOAM nozzle launcher",
+  "scripts": { "start": "node server.js" }
+}

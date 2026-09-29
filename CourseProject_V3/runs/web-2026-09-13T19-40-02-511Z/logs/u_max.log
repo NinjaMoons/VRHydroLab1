@@ -1,0 +1,42 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : foamPostProcess -latestTime -func cellMaxMag(U)
+Date   : Sep 13 2026
+Time   : 22:42:06
+Host   : "123"
+PID    : 90274
+I/O    : uncollated
+Case   : /tmp/CourseProject_V3/jobs/web-2026-09-13T19-40-02-511Z/case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 2501
+
+volFieldValue cellMaxMag(U) read:
+    number of cells = 5267
+    volume = 6.49e-06
+    operation = maxMag
+
+Time = 2501s
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects
+volFieldValue cellMaxMag(U) write:
+    maxMag(all) of U = 0.46627868 at location (0.19942252 0.0077034249 0.0005) in cell 1808
+
+
+End
+

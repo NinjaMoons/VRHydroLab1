@@ -1,0 +1,28 @@
+{
+  "edges": 2020,
+  "faces": 11542,
+  "files": {
+    "hdf": {
+      "bytes": 2071804,
+      "path": "/media/sf_OpenFOAM_Labs/CourseProject_V3/validation/mesh_attempt3/CourseProject_V3.hdf"
+    },
+    "unv": {
+      "bytes": 3944944,
+      "path": "/media/sf_OpenFOAM_Labs/CourseProject_V3/validation/mesh_attempt3/Mesh.unv"
+    }
+  },
+  "groups": {
+    "frontAndBack": 10534,
+    "inlet": 18,
+    "obstacles": 448,
+    "outlet": 18,
+    "walls": 524
+  },
+  "hexas": 5101,
+  "nodes": 11364,
+  "pentas": 166,
+  "quadranglesPerPlane": 5101,
+  "settings": "/media/sf_OpenFOAM_Labs/CourseProject_V3/validation/settings_mesh_attempt3.json",
+  "trianglesPerPlane": 166,
+  "volumes": 5267
+}

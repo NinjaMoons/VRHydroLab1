@@ -1,0 +1,74 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-18870c24d21c
+Exec   : blockMesh
+Date   : Sep 13 2026
+Time   : 03:05:10
+Host   : "123"
+PID    : 45184
+I/O    : uncollated
+Case   : /media/sf_OpenFOAM_Labs/fast_finish_2026/LR5/webapp/runs/2026-09-12T23-50-01-637Z/case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading "blockMeshDict"
+
+Creating block mesh from
+    "system/blockMeshDict"
+No non-linear block edges defined
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Basic statistics
+    Number of internal faces : 0
+    Number of boundary faces : 6
+    Number of defined boundary faces : 6
+    Number of undefined boundary faces : 0
+
+Checking topology
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 0.001
+    Block 0 cell size :
+        i : 0.0025
+        j : 0.0025
+        k : 0.002
+
+No patch pairs to merge
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 -0.005) (0.1 0.1 0.005)
+  nPoints: 10086
+  nCells: 8000
+  nFaces: 26000
+  nInternalFaces: 22000
+----------------
+Patches
+----------------
+  patch 0 (start: 22000 size: 400) name: topAndBottom
+  patch 1 (start: 22400 size: 3200) name: frontAndBack
+  patch 2 (start: 25600 size: 200) name: hot
+  patch 3 (start: 25800 size: 200) name: cold
+
+End
+
